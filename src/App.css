@@ -1,0 +1,11 @@
+/* background setUp */
+.App{
+    background-image: linear-gradient(
+        black,
+        rgba(0, 0, 0, 0.7)
+    ), url('./img/home.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
