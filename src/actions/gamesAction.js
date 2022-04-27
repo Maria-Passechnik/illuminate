@@ -14,18 +14,21 @@ export const loadGames = () => async (dispatch) => {
   const popularData = await axios.get(popularGamesURL(), {
     headers: {
         'Content-Type': 'application/json'
-    }
+    },
+    data: {},
 } );
 
   const newGamesData = await axios.get(newGamesURL(), {
     headers: {
         'Content-Type': 'application/json'
-    }
+    },
+    data: {},
 });
   const upcomingData = await axios.get(upcomingGamesURL(), {
     headers: {
         'Content-Type': 'application/json'
-    }
+    },
+    data: {},
 });
   dispatch({
     type: "FETCH_GAMES",
@@ -41,7 +44,8 @@ export const fetchSearch = (game_name) => async (dispatch) => {
   const searchGames = await axios.get(searchGameURL(game_name), {
     headers: {
         'Content-Type': 'application/json'
-    }
+    },
+    data: {},
 });
 
   dispatch({
