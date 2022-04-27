@@ -2,7 +2,7 @@
 const base_url = "https://api.rawg.io/api/";
 
 // API KEY
-const API_KEY = process.env.React_App_MY_API_KEY;
+const API_KEY = 'b05c074db97a43b0ae434614dda24f79';
 
 //Getting the date
 const getCurrentMonth = () => {
