@@ -9,10 +9,24 @@ import {
 //Action Creator
 
 export const loadGames = () => async (dispatch) => {
+
   //FETCH AXIOS
-  const popularData = await axios.get(popularGamesURL());
-  const newGamesData = await axios.get(newGamesURL());
-  const upcomingData = await axios.get(upcomingGamesURL());
+  const popularData = await axios.get(popularGamesURL(), {
+    headers: {
+        'Content-Type': 'application/json'
+    }
+} );
+
+  const newGamesData = await axios.get(newGamesURL(), {
+    headers: {
+        'Content-Type': 'application/json'
+    }
+});
+  const upcomingData = await axios.get(upcomingGamesURL(), {
+    headers: {
+        'Content-Type': 'application/json'
+    }
+});
   dispatch({
     type: "FETCH_GAMES",
     payload: {
@@ -24,7 +38,11 @@ export const loadGames = () => async (dispatch) => {
 };
 
 export const fetchSearch = (game_name) => async (dispatch) => {
-  const searchGames = await axios.get(searchGameURL(game_name));
+  const searchGames = await axios.get(searchGameURL(game_name), {
+    headers: {
+        'Content-Type': 'application/json'
+    }
+});
 
   dispatch({
     type: "FETCH_SEARCHED",
