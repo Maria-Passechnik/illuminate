@@ -6,11 +6,12 @@ import {
   searchGameURL,
 } from "../api";
 
-//Action Creator
+// Action Creator
 
 export const loadGames = () => async (dispatch) => {
 
-  //FETCH AXIOS
+  // FETCH AXIOS
+  // PopularGames Api
   const popularData = await axios.get(popularGamesURL()).catch((error) => {
     if (error.response) {
       console.log(error.response.data);
@@ -19,6 +20,7 @@ export const loadGames = () => async (dispatch) => {
     }
   });
 
+  // NewGames Api
   const newGamesData = await axios.get(newGamesURL()).catch((error) => {
     if (error.response) {
       console.log(error.response.data);
@@ -27,6 +29,7 @@ export const loadGames = () => async (dispatch) => {
     }
   });
   
+  // UpcomingGames Api
   const upcomingData = await axios.get(upcomingGamesURL()).catch((error) => {
     if (error.response) {
       console.log(error.response.data);
@@ -44,6 +47,7 @@ export const loadGames = () => async (dispatch) => {
   });
 };
 
+// FilterdGame by name
 export const fetchSearch = (game_name) => async (dispatch) => {
   const searchGames = await axios.get(searchGameURL(game_name)).catch((error) => {
     if (error.response) {

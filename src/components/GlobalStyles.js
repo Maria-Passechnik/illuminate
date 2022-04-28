@@ -24,8 +24,7 @@ const GlobalStyles = createGlobalStyle`
     }
     h2{
         font-size: 3rem;
-        font-family: 'Abril Fatface', cursive;
-        font-weight: lighter;
+        font-family: 'Quicksand', sans-serif;
         color: #ffffff;
     }
     h3{
@@ -46,8 +45,7 @@ const GlobalStyles = createGlobalStyle`
         display: block;
     }
     input{
-        font-weight: bold;
-        font-family: "Montserrat", sans-serif;
+        font-weight: light;
     }
     .footer{
         padding-top: 3rem;
